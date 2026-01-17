@@ -75,9 +75,19 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.1);
 }
 
 .main-nav {
@@ -1285,11 +1295,6 @@ input:checked+.slider:before {
 .dark-mode .main-header {
   background: linear-gradient(135deg, #0a4a50 0%, #003b46 100%);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.dark-mode .logo {
-  color: var(--color-gold);
-  text-shadow: 0 0 10px rgba(196, 155, 102, 0.3);
 }
 
 .dark-mode .nav-link {
