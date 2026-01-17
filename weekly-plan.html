@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخطة الأسبوعية - خطة تعلم الإنجليزية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">ZAmericanEnglish</h1>
+            <button class="menu-toggle" aria-label="قائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="dashboard.html" class="nav-link">لوحة التحكم</a>
+                <a href="weekly-plan.html" class="nav-link active">الخطة الأسبوعية</a>
+                <a href="statistics.html" class="nav-link">إحصائياتي</a>
+                <a href="library.html" class="nav-link">المكتبة</a>
+                <a href="settings.html" class="nav-link">الإعدادات</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="weekly-plan-container">
+            <div class="plan-controls">
+                <div class="month-selector">
+                    <label for="month-select">اختر الشهر:</label>
+                    <select id="month-select" class="form-select">
+                        <option value="1">الشهر الأول</option>
+                        <option value="2">الشهر الثاني</option>
+                        <option value="3">الشهر الثالث</option>
+                        <option value="4">الشهر الرابع</option>
+                        <option value="5">الشهر الخامس</option>
+                        <option value="6">الشهر السادس</option>
+                        <option value="7">الشهر السابع</option>
+                    </select>
+                </div>
+                <div class="week-selector-plan">
+                    <label for="week-select">اختر الأسبوع:</label>
+                    <select id="week-select" class="form-select">
+                        <!-- سيتم ملؤها ديناميكياً -->
+                    </select>
+                </div>
+            </div>
+
+            <div id="plan-content">
+                <!-- سيتم ملؤها ديناميكياً -->
+            </div>
+
+            <!-- Modal للملاحظات -->
+            <div id="notes-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>ملاحظات الدرس</h2>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <textarea id="notes-textarea" placeholder="اكتب ملاحظاتك هنا..." rows="6"></textarea>
+                        <div class="modal-actions">
+                            <button class="btn btn-primary" id="save-notes-btn">حفظ</button>
+                            <button class="btn" id="cancel-notes-btn">إلغاء</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 ZAmericanEnglish. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/weekly-plan.js"></script>
+</body>
+</html>
+

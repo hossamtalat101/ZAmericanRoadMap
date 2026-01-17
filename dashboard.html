@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - خطة تعلم الإنجليزية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">ZAmericanEnglish</h1>
+            <button class="menu-toggle" aria-label="قائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="dashboard.html" class="nav-link active">لوحة التحكم</a>
+                <a href="weekly-plan.html" class="nav-link">الخطة الأسبوعية</a>
+                <a href="statistics.html" class="nav-link">إحصائياتي</a>
+                <a href="library.html" class="nav-link">المكتبة</a>
+                <a href="settings.html" class="nav-link">الإعدادات</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard-header">
+            <div class="container">
+                <h1>لوحة التحكم</h1>
+                <div class="progress-section">
+                    <h2>تقدمك العام</h2>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 0%">0%</div>
+                    </div>
+                    <p class="progress-text text-center mt-1">0 من 0 درس مكتمل</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="dashboard-tabs">
+                <button class="tab-btn active" data-tab="schedule">الجدول الأسبوعي</button>
+                <button class="tab-btn" data-tab="calendar">التقويم</button>
+            </div>
+
+            <div id="schedule-tab" class="tab-content active">
+                <div class="week-selector">
+                    <!-- سيتم ملؤها ديناميكياً -->
+                </div>
+
+                <div id="week-container" class="weekly-schedule">
+                    <!-- سيتم ملؤها ديناميكياً -->
+                </div>
+            </div>
+
+            <div id="calendar-tab" class="tab-content">
+                <div id="calendar-container"></div>
+            </div>
+
+            <div class="skills-section mt-2">
+                <h2 class="section-title">تقدم المهارات</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-book skill-icon"></i>
+                        <h3>القواعد</h3>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress" style="width: 0%"></div>
+                        </div>
+                        <p class="skill-percentage">0%</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-book-reader skill-icon"></i>
+                        <h3>القراءة</h3>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress" style="width: 0%"></div>
+                        </div>
+                        <p class="skill-percentage">0%</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-headphones skill-icon"></i>
+                        <h3>الاستماع</h3>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress" style="width: 0%"></div>
+                        </div>
+                        <p class="skill-percentage">0%</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-comments skill-icon"></i>
+                        <h3>المحادثة</h3>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress" style="width: 0%"></div>
+                        </div>
+                        <p class="skill-percentage">0%</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-volume-up skill-icon"></i>
+                        <h3>الصوتيات</h3>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress" style="width: 0%"></div>
+                        </div>
+                        <p class="skill-percentage">0%</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-pen skill-icon"></i>
+                        <h3>الكتابة</h3>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress" style="width: 0%"></div>
+                        </div>
+                        <p class="skill-percentage">0%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 ZAmericanEnglish. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+

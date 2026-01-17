@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إحصائياتي - خطة تعلم الإنجليزية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">ZAmericanEnglish</h1>
+            <button class="menu-toggle" aria-label="قائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="dashboard.html" class="nav-link">لوحة التحكم</a>
+                <a href="weekly-plan.html" class="nav-link">الخطة الأسبوعية</a>
+                <a href="statistics.html" class="nav-link active">إحصائياتي</a>
+                <a href="library.html" class="nav-link">المكتبة</a>
+                <a href="settings.html" class="nav-link">الإعدادات</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h1 class="section-title">إحصائياتي</h1>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-value" id="total-lessons">0</div>
+                    <div class="stat-label">إجمالي الدروس</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-value" id="completed-lessons">0</div>
+                    <div class="stat-label">الدروس المكتملة</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-value" id="overall-progress">0%</div>
+                    <div class="stat-label">التقدم الإجمالي</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="stat-value" id="achievements-count">0</div>
+                    <div class="stat-label">الإنجازات</div>
+                </div>
+            </div>
+
+            <div class="skills-progress-section mt-2">
+                <h2 class="section-title">تقدم المهارات</h2>
+                <div id="skills-progress" class="skills-progress-container">
+                    <!-- سيتم ملؤها ديناميكياً -->
+                </div>
+            </div>
+
+            <div class="charts-section mt-2">
+                <h2 class="section-title">الرسوم البيانية</h2>
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3>تطور التقدم عبر الأسابيع</h3>
+                        <canvas id="progressChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>توزيع المهارات</h3>
+                        <canvas id="skillsChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>مقارنة الأداء الشهري</h3>
+                        <canvas id="monthlyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advanced-stats-section mt-2">
+                <h2 class="section-title">إحصائيات متقدمة</h2>
+                <div class="advanced-stats-grid">
+                    <div class="advanced-stat-card">
+                        <i class="fas fa-fire stat-icon"></i>
+                        <div class="advanced-stat-content">
+                            <h3 id="streak-days">0</h3>
+                            <p>أيام متتالية</p>
+                        </div>
+                    </div>
+                    <div class="advanced-stat-card">
+                        <i class="fas fa-clock stat-icon"></i>
+                        <div class="advanced-stat-content">
+                            <h3 id="avg-lessons">0</h3>
+                            <p>متوسط الدروس/يوم</p>
+                        </div>
+                    </div>
+                    <div class="advanced-stat-card">
+                        <i class="fas fa-calendar-week stat-icon"></i>
+                        <div class="advanced-stat-content">
+                            <h3 id="best-day">-</h3>
+                            <p>أفضل يوم</p>
+                        </div>
+                    </div>
+                    <div class="advanced-stat-card">
+                        <i class="fas fa-hourglass-half stat-icon"></i>
+                        <div class="advanced-stat-content">
+                            <h3 id="estimated-completion">-</h3>
+                            <p>التاريخ المتوقع للإكمال</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements-section mt-2">
+                <h2 class="section-title">الإنجازات</h2>
+                <div id="achievements-list" class="achievements-grid">
+                    <!-- سيتم ملؤها ديناميكياً -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 ZAmericanEnglish. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/statistics.js"></script>
+</body>
+</html>
+

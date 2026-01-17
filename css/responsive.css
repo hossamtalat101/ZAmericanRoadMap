@@ -1,0 +1,539 @@
+/* التصميم المتجاوب */
+
+/* Large Tablets */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .levels-grid,
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .week-selector {
+    gap: 0.5rem;
+  }
+  
+  .week-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .progress-section {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .main-header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  /* Hamburger Menu */
+  .menu-toggle {
+    display: block !important;
+  }
+  
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: var(--color-petroleum);
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: var(--shadow-lg);
+    display: none;
+    gap: 0.5rem;
+    z-index: 999;
+  }
+  
+  .main-nav.active {
+    display: flex;
+  }
+  
+  .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: right;
+    border-radius: 5px;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    background: var(--color-petroleum-light);
+  }
+  
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-timeline {
+    gap: 1rem;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .levels-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .week-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .week-btn {
+    width: 100%;
+  }
+  
+  .day-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .day-separator {
+    width: 100%;
+    height: 2px;
+    margin: 0.5rem 0;
+  }
+  
+  .day-name {
+    width: 100%;
+    text-align: right;
+    padding: 0.5rem 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+  }
+  
+  .day-row.tuesday .day-name {
+    border-top-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .lessons-column {
+    width: 100%;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .weekly-plan-container {
+    padding: 1rem;
+  }
+  
+  .plan-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .plan-controls label {
+    font-size: 0.9rem;
+  }
+  
+  .form-select {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  
+  .week-banner {
+    padding: 1rem;
+  }
+  
+  .week-banner h2 {
+    font-size: 1.4rem;
+  }
+  
+  .month-calendar-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .calendar-number {
+    font-size: 1.5rem;
+  }
+  
+  .month-name {
+    font-size: 0.9rem;
+  }
+  
+  .lesson-row-item {
+    flex-wrap: wrap;
+  }
+  
+  .lesson-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-left: 0.5rem;
+  }
+  
+  .lesson-text {
+    font-size: 0.9rem;
+  }
+  
+  .day-name {
+    font-size: 1rem;
+    min-width: auto;
+  }
+  
+  .skills-progress-container {
+    padding: 1.5rem;
+  }
+  
+  .skill-progress-item {
+    margin-bottom: 1rem;
+  }
+  
+  .settings-card {
+    padding: 1.5rem;
+  }
+  
+  .settings-card h2 {
+    font-size: 1.2rem;
+  }
+  
+  .week-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .week-progress {
+    font-size: 0.9rem;
+  }
+  
+  .side-note {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .levels-section,
+  .features-section {
+    padding: 2rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .btn-large {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .plan-controls {
+    flex-direction: column;
+  }
+  
+  .plan-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .library-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-title {
+    font-size: 1.3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .btn-large {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .timeline-item {
+    padding: 1rem;
+  }
+  
+  .timeline-icon {
+    font-size: 1.5rem;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.85rem;
+  }
+  
+  .level-card,
+  .feature-card {
+    padding: 1.5rem;
+  }
+  
+  .level-icon,
+  .feature-card i {
+    font-size: 2rem;
+  }
+  
+  .dashboard-header {
+    padding: 1.5rem 0;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .progress-section {
+    padding: 1rem;
+  }
+  
+  .progress-bar-container {
+    height: 25px;
+  }
+  
+  .progress-bar {
+    font-size: 0.85rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .stat-icon {
+    font-size: 2.5rem;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+  
+  .skill-card {
+    padding: 1rem;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+  }
+  
+  .skill-card h3 {
+    font-size: 1rem;
+  }
+  
+  .achievement-card {
+    padding: 1.5rem;
+  }
+  
+  .achievement-icon {
+    font-size: 2.5rem;
+  }
+  
+  .achievement-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .library-card {
+    padding: 1.5rem;
+  }
+  
+  .library-icon {
+    font-size: 2.5rem;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .day-row {
+    padding: 1rem;
+  }
+  
+  .lesson-row-item {
+    margin-bottom: 0.3rem;
+  }
+  
+  .side-note i {
+    font-size: 1.2rem;
+  }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-card {
+    padding: 1rem;
+  }
+  
+  .chart-card canvas {
+    max-height: 250px;
+  }
+  
+  .advanced-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .search-container {
+    padding: 1rem;
+  }
+  
+  .filters-container {
+    flex-direction: column;
+  }
+  
+  .filter-select {
+    width: 100%;
+  }
+  
+  .dashboard-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .calendar-grid {
+    gap: 0.25rem;
+  }
+  
+  .calendar-day {
+    padding: 0.25rem;
+    font-size: 0.8rem;
+  }
+  
+  .day-number {
+    font-size: 0.9rem;
+  }
+}
+
+/* تحسينات إضافية للتصميم المتجاوب */
+@media (max-width: 768px) {
+  /* منع overflow */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* تحسين الجداول */
+  .week-selector {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 0.5rem;
+  }
+  
+  .week-selector::-webkit-scrollbar {
+    height: 5px;
+  }
+  
+  .week-selector::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 5px;
+  }
+  
+  /* تحسين الأزرار */
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* تحسين البطاقات */
+  .level-card,
+  .feature-card,
+  .stat-card,
+  .skill-card,
+  .achievement-card,
+  .library-card {
+    margin-bottom: 1rem;
+  }
+  
+  /* تحسين التباعد */
+  .section-title {
+    margin-bottom: 2rem;
+  }
+  
+  /* تحسين الهيدر */
+  .main-header {
+    padding: 0.75rem 0;
+  }
+  
+  /* تحسين الفوتر */
+  .main-footer {
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+  }
+}
+
+/* تحسينات للشاشات الصغيرة جداً */
+@media (max-width: 360px) {
+  .logo {
+    font-size: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+  }
+  
+  .week-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .day-name {
+    font-size: 0.9rem;
+  }
+  
+  .lesson-text {
+    font-size: 0.85rem;
+  }
+}
+
