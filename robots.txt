@@ -1,0 +1,11 @@
+# Robots.txt for ZAmericanEnglish
+# https://zamerican-roadmap.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://zamerican-roadmap.vercel.app/sitemap.xml
+
+# Crawl-delay (optional)
+Crawl-delay: 1
